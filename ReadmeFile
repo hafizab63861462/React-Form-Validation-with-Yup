@@ -1,0 +1,9 @@
+Don’t use Jquery:
+1- Form Validation:
+Password and confirm password should be matched.
+Password should have min length of 8. Should have both alphanumeric, should have at least one upper case and one the lower case.
+The notification email field can have multiple comma-separated emails. We have to validate each mail.
+The age field value should be between 18 and 151.
+The contact number should be 11 digit number.
+Required fields are First name, last name, age, and notification emails.
+Submit button should be disabled if the form is not validated and vice versa.
