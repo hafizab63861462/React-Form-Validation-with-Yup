@@ -1,10 +1,9 @@
 import "./App.css";
-import SimpleInput from "./components/SimpleInput";
-
+import HookForm from "./components/HookForm";
 function App() {
   return (
     <div className="app">
-      <SimpleInput />
+      <HookForm />
     </div>
   );
 }
