@@ -1,8 +1,12 @@
 import * as Yup from "yup";
 
 export const userSchema = Yup.object().shape({
-  fname: Yup.string().required("First Name should not be Empty"),
-  lname: Yup.string().required("Last Name should not be Empty"),
+  fname: Yup.string()
+    .required("First Name should not be Empty")
+    .matches(/^[a-zA-Z]+$/, "First Name must be a valid string"),
+  lname: Yup.string()
+    .required("Last Name should not be Empty")
+    .matches(/^[a-zA-Z]+$/, "Last Name must be a valid string"),
   age: Yup.string()
     .typeError("age must be a number")
     .required("age is required")
