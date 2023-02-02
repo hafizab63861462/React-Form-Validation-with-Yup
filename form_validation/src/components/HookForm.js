@@ -102,10 +102,7 @@ const HookForm = () => {
             />
             {errors.c_password && <p> {errors.c_password.message}</p>}
           </div>
-          <button
-            type="submit"
-            disabled={Object.keys(errors).length != 0 || !isValid}
-          >
+          <button type="submit" disabled={!isValid}>
             Submit
           </button>
         </div>
