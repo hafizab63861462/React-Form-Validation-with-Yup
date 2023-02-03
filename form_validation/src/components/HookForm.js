@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { userSchema } from "../Validations/UserValidation";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -15,8 +14,7 @@ const HookForm = () => {
     mode: "all",
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = () => {
     reset();
   };
 
@@ -29,23 +27,23 @@ const HookForm = () => {
           <div className="field">
             <label>First Name</label>
             <input
-              name="fname"
+              name="firstName"
               placeholder="First Name"
               autoFocus={true}
-              {...register("fname")}
+              {...register("firstName")}
             />
-            {errors.fname && <p> {errors.fname.message}</p>}
+            {errors.firstName && <p> {errors.firstName.message}</p>}
           </div>
 
           <div className="field">
             <label>Last Name</label>
             <input
               type="text"
-              name="lname"
+              name="lastName"
               placeholder="Last name"
-              {...register("lname")}
+              {...register("lastName")}
             />
-            {errors.lname && <p> {errors.lname.message}</p>}
+            {errors.lastName && <p> {errors.lastName.message}</p>}
           </div>
 
           <div className="">
@@ -63,11 +61,11 @@ const HookForm = () => {
             <label>Phone Number</label>
             <input
               type="number"
-              name="phone_number"
+              name="phoneNumber"
               placeholder="Contact Number"
-              {...register("phone_number")}
+              {...register("phoneNumber")}
             />
-            {errors.phone_number && <p> {errors.phone_number.message}</p>}
+            {errors.phoneNumber && <p> {errors.phoneNumber.message}</p>}
           </div>
 
           <div className="field">
@@ -96,11 +94,11 @@ const HookForm = () => {
             <label>Confirm Password</label>
             <input
               type="password"
-              name="c_password"
+              name="confirmPassowrd"
               placeholder="Cpnfirm Password"
-              {...register("c_password")}
+              {...register("confirmPassword")}
             />
-            {errors.c_password && <p> {errors.c_password.message}</p>}
+            {errors.confirmPassword && <p> {errors.confirmPassword.message}</p>}
           </div>
           <button type="submit" disabled={!isValid}>
             Submit
